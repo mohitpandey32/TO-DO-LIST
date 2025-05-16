@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container {
+    max-width: 600px;
+    
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Add these styles to your existing CSS */
+.priority-select {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 0 15px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.priority-select:hover {
+    border-color: #2196F3;
+}
+
+.priority-select:focus {
+    border-color: #2196F3;
+    box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
+}
+
+.priority-select option {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.priority-select option[value="high"] {
+    background-color: #ffebee;
+    color: #d32f2f;
+}
+
+.priority-select option[value="medium"] {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.priority-select option[value="low"] {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #4CAF50;
+}
+
+span {
+    flex: 1;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+}
+
+.edit-btn:hover {
+    background-color: #1976D2;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    margin-left:  1rem;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Add these new styles */
+.done {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.completed-task {
+    background-color: #f0f0f0;
+    opacity: 0.8;
+}
+
+.done-btn {
+    background-color: #4CAF50;
+
+    color: white;
+    margin-right: 0.5rem;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    padding: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.done-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+:root {
+    --bg-color: #f0f2f5;
+    --container-bg: white;
+    --text-color: #333;
+    --input-border: #ddd;
+    --task-bg: #f9f9f9;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --container-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --input-border: #404040;
+    --task-bg: #363636;
+    --shadow-color: rgba(0,0,0,0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    background-color: var(--container-bg);
+    box-shadow: 0 0 10px var(--shadow-color);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input, .priority-select {
+    background-color: var(--container-bg);
+    color: var(--text-color);
+    border-color: var(--input-border);
+}
+
+li {
+    background-color: var(--task-bg);
+    color: var(--text-color);
+}
